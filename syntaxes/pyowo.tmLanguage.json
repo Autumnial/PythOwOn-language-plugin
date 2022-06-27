@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PythOwOn",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#function"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pyowo",
+				"match": "\\b(if|whiwe|fowor|retuwn|ewse|ewif|def)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pyowo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pyowo",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.pyowo",
+					"match": "# .*"
+				}
+			]
+			
+		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.character.pyowo",
+					"match": "\\b(Truwue|Fawse|Nuww)\\b"
+				}
+			]
+		},
+		"function": {
+			"patterns": [
+				{
+					"name": "entity.name.function.pyowo",
+					"match": "\\b(?<=def).*(?=\\(\\):)\\b"
+				},
+				{
+					"name": "entity.name.function.pyowo",
+					"match": "\\b(pwint)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pyowo"
+}

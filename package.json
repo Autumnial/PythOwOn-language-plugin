@@ -1,0 +1,25 @@
+{
+    "name": "pyowo",
+    "displayName": "pyOwO",
+    "description": "pyowo lanugage support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pyowo",
+            "aliases": ["PythOwOn", "pyowo"],
+            "extensions": ["pyowo"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pyowo",
+            "scopeName": "source.pyowo",
+            "path": "./syntaxes/pyowo.tmLanguage.json"
+        }]
+    }
+}
