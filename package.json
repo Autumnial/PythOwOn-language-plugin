@@ -1,10 +1,14 @@
 {
     "name": "pyowo",
-    "displayName": "pyOwO",
-    "description": "pyowo lanugage support",
+    "displayName": "PythOwOn",
+    "description": "pyowo lanugage support!",
     "version": "0.0.1",
+    "icon": "./pythowo.png",
     "engines": {
         "vscode": "^1.68.0"
+    },
+    "repository": {
+        "url": "https://github.com/Autumnial/PythOwOn-language-plugin/tree/master"
     },
     "categories": [
         "Programming Languages"
@@ -14,12 +18,18 @@
             "id": "pyowo",
             "aliases": ["PythOwOn", "pyowo"],
             "extensions": ["pyowo"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./pythowo.png",
+                "dark": "./pythowo.png"
+            }
         }],
         "grammars": [{
             "language": "pyowo",
             "scopeName": "source.pyowo",
             "path": "./syntaxes/pyowo.tmLanguage.json"
         }]
+        
+        
     }
 }

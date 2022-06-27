@@ -16,14 +16,26 @@
 		},
 		{
 			"include": "#function"
+		}, 
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#invalid"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pyowo",
-				"match": "\\b(if|whiwe|fowor|retuwn|ewse|ewif|def)\\b"
-			}]
+				"match": "\\b(if|whiwe|fow|retuwn|ewse|ewif|def|assewt|bweak|continuwue|cwass|dew|waise|twy|finawwy|fwom|impowt|gwobaw|wambda|nonwocaw|pwass|retuwn|whiwe|yiewd|in)\\b"
+			}, 
+			{
+				"name": "keyword.operator.pyowo",
+				"match": "[+=<>-*/]"
+
+			}
+		]
 		},
 		"strings": {
 			"name": "string.quoted.double.pyowo",
@@ -40,7 +52,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.number-sign.pyowo",
-					"match": "# .*"
+					"match": "#.*"
 				}
 			]
 			
@@ -48,8 +60,12 @@
 		"constant": {
 			"patterns": [
 				{
-					"name": "constant.character.pyowo",
-					"match": "\\b(Truwue|Fawse|Nuww)\\b"
+					"name": "constant.language.pyowo",
+					"match": "\\b(Truwue|Fawse|Nowone)\\b"
+				},
+				{
+					"name": "constant.numeric.pyowo",
+					"match": "\\b[0-9]+\\b"
 				}
 			]
 		},
@@ -57,11 +73,28 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.pyowo",
-					"match": "\\b(?<=def).*(?=\\(\\):)\\b"
+					"match": "\\b(?<=def) [a-zA-Z_]*\\b"
 				},
 				{
 					"name": "entity.name.function.pyowo",
-					"match": "\\b(pwint)\\b"
+					"match": "\\b(pwint|wange)\\b"
+				}
+			]
+		}, 
+		"variable": {
+			"patterns": [
+				
+				{
+					"name": "variable.name.pyowo",
+					"match": "\\b[a-zA-Z_][a-zA-Z_0-9]*\\b"
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [
+				{
+					"name": "invalid.illegal.pyowo",
+					"match": "\\b[0-9]+[^+-=]\\b"
 				}
 			]
 		}
